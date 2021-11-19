@@ -15,7 +15,7 @@
 # In[ ]:
 
 
-# Function to open all documents in a folder
+# Import Libraries
 from tkinter import *
 import os 
 import re
