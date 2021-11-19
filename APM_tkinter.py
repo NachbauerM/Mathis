@@ -7,7 +7,7 @@
 # 
 # 1. Scan through a folder with project offers
 # 2. Filter those that contain a certain keyword
-# 3. Create an Excel Table with certain parameters that will be extracted from the filtered files (e.g. project duration, country, Project number etc.)
+# 3. Create an Excel Table with certain parameters that will be extracted from the filtered files.
 
 # ## Define Functions:
 # 
