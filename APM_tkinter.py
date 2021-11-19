@@ -204,11 +204,6 @@ def fun_project_name(project_name, string):
         return "error"
 
 
-# In[ ]:
-
-
-project_country = r"Deutsche Entwicklungszusammenarbeit mit\s"
-
 
 # In[ ]:
 
@@ -220,15 +215,9 @@ project_start = r"(Von\s\d{2}\/d[4])|(d{2}/d{4}\s\bis\s\d{2}\d{4})"
 
 
 search_term_content = r"[^.]*?B\s?e\s?h\s?i\s?n\s?d\s?e\s?r\s?u\s?n\s?g[^.]*\."
-#r"[^.]*?Behinderung[^.]*\."
 
 
 # In[ ]:
-
-
-#Müssen verbessert werden!!! Für möglichst alle PV Formate funktionieren
-# ÜH-Formate anders!
-#could use re.compile to make it faster?
 
 Kurzbeschreibung = re.compile("Kurzbeschreibung?")
 Einordnung = re.compile("Einordnung\s?des\s?Vorhabens?")
@@ -238,11 +227,6 @@ Gestaltung = re.compile("Gestaltung\s?des\s?TZ-Moduls?|Gestaltung des TZ-Moduls"
 Bewertung = re.compile("Bewertung\s?der\s?Wirkungen\s?und\s?der\s?Risiken\s?des\s?Moduls?") #(Bewertung\s?der\s?Nachhaltigkeit?|)
 Wirkungsmatrix = re.compile("Wirkungsmatrix erstellt am") # aktualisiert am für ÄA
 
-# Kurzbeschreibung (mehrmals) oft mit text dahinter
-# Darstellung er Maßnahme (inkl. Wirkungen und Risiken)
-
-
-# ## Create GUI (Tkinter)
 
 # # Programm
 
@@ -405,16 +389,6 @@ def program():
         return liste_search_term, liste2_no_search_term, liste3_document_name, liste4_project_number, liste5_project_name, 
     liste6_not_searchable, liste7_Kurzbeschreibung, liste8_Einordnung, liste9_Problemanalyse, liste10_Ziele, 
     liste11_Gestaltung, liste12_Bewertung, liste13_Wirkungsmatrix, scanned_pdfs
-
-#Derzeitige Sortierung funktioniert so nur, wenn WiMa nicht in MV Zeile 72 müsste das < geändert werden
-# Dokumente nicht geöffnet habe! sonst ZIP Fehler!BadZipFile: File is not a zip file (eine DAtei kaput = Neuer ORnder nutzen)
-
-
-# In[ ]:
-
-
-#C:\Users\User\Desktop\python\APM\Portfolio
-
 
 # ## Create Excel File
 
@@ -717,9 +691,6 @@ from tkinter import ttk
 root = Tk()
 root.geometry("700x600")
 root.title("GV Inclusion Portfolio Analysis")
-
-
-#progress_bar = ttk.Progressbar(root, orient = HORIZONTAL, length = 100, mode = "indeterminate")
     
 path_var = StringVar()
 search_var = StringVar()
@@ -815,29 +786,7 @@ myLabel_end.grid(row= 13, column =0, columnspan = 3, padx = 10, pady = 20)
 root.mainloop()
 
 
-#  C:\Users\User\Desktop\python\APM\Portfolio
-#  
-#  
-#  C:\Users\User\Desktop\python\APM\2020
-
-# 1. Transfrom to py file!
-# 
-# 2. Go to directory => python -m PyInstaller --onefile -w APM_tkinter.py
-
-# In[1]:
-
-
-liste = []
-
-
-# In[2]:
-
-
-len(liste)
-
-
-# In[ ]:
-
+# Create a windows application: Go to directory => python -m PyInstaller --onefile -w APM_tkinter.py
 
 
 
