@@ -222,10 +222,10 @@ search_term_content = r"[^.]*?B\s?e\s?h\s?i\s?n\s?d\s?e\s?r\s?u\s?n\s?g[^.]*\."
 Kurzbeschreibung = re.compile("Kurzbeschreibung?")
 Einordnung = re.compile("Einordnung\s?des\s?Vorhabens?")
 Problemanalyse = re.compile("Problem-\s?und\s?(Potenzialanalyse?|Potentialanalyse?)")
-Ziele = re.compile("Ziele, Wirkungshypothesen, Indikatoren?") # r"Ziele, ((Wirkungshypothesen, Indikatoren?)|(Indikatoren, Wirkungshypothesen?))"
+Ziele = re.compile("Ziele, Wirkungshypothesen, Indikatoren?")
 Gestaltung = re.compile("Gestaltung\s?des\s?TZ-Moduls?|Gestaltung des TZ-Moduls")
-Bewertung = re.compile("Bewertung\s?der\s?Wirkungen\s?und\s?der\s?Risiken\s?des\s?Moduls?") #(Bewertung\s?der\s?Nachhaltigkeit?|)
-Wirkungsmatrix = re.compile("Wirkungsmatrix erstellt am") # aktualisiert am für ÄA
+Bewertung = re.compile("Bewertung\s?der\s?Wirkungen\s?und\s?der\s?Risiken\s?des\s?Moduls?") 
+Wirkungsmatrix = re.compile("Wirkungsmatrix erstellt am") 
 
 
 # # Programm
@@ -377,12 +377,6 @@ def program():
                             liste_search_term[counter].append(item)
 
                 except:
-                    #if not readalbe returns: "" z.b. bei 2012.2098.7.Auftrag
-                    #text = scanned_pdf_reader(document) 
-                    #if search_term in text:
-                    #    liste.append(search_term)
-                    #    liste2.append(document)
-                    #else:
                     print("error", document)
 
         break   
@@ -696,14 +690,14 @@ path_var = StringVar()
 search_var = StringVar()
 
 # Put an Image in the GUI, can also be background of a button
-my_img = ImageTk.PhotoImage(Image.open(r"C:\Users\User\Desktop\python\APM\200428_giz_GV-Inklusion_Grafik_06_Keyvisual_Keyvisual.jpg"))
+my_img = ImageTk.PhotoImage(Image.open(r"path"))
 myLabel_img = Label(root, image = my_img)
 myLabel_img.place(x = 0 , y = 0)
 
 
 
-explanation = Label(root, text ="""This Tool analyses GIZ Offers \n by search term and outputs and Excel File. \n 
-First you need to enter the Path to the GIZ Offers \n Second please enter a search term and press "Click to start. \n
+explanation = Label(root, text ="""This Tool analyses Offers \n by search term and outputs and Excel File. \n 
+First you need to enter the Path to the Offers \n Second please enter a search term and press "Click to start. \n
 Lastly Press "Click to Create Excel File". The file will appear in the same directory as this programm. \n Please follow the instructions in the manual""")
 
 path_entry = Entry(root, textvariable = path_var, width= 50)
@@ -754,7 +748,7 @@ my_Button_Scanned_analysis = Button(root, text="Click to analyse scanned PDFs. W
 
 myLabel_PFB = Label(root, text ="The application can also just count the instances of the search term \n and output an excel file containing the document name and the number of search teram instances for each.")
 
-myLabel_end = Label(root, text ="This application was programmed by a noob and is very unstable. \n Please reach out to mathis.nachbauer@giz.de if you have issues.")
+myLabel_end = Label(root, text ="This application was programmed by a noob and is very unstable. \n Please reach out to .... if you have issues.")
 
 
 explanation.grid(row = 1, column = 0, columnspan =3, padx = 10, pady = 10)
